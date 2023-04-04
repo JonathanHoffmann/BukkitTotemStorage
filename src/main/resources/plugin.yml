@@ -1,0 +1,12 @@
+name: BukkitTotemStorage
+main: me.Jonnyfant.BukkitTotemStorage.BukkitTotemStorage
+author: Jonnyfant
+version: 1.0
+commands:
+  storetotem:
+    usage: /<command>
+    permission: totemstorage.use
+permissions:
+  totemstorage.use:
+    default: true
+
