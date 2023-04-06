@@ -1,6 +1,8 @@
 package me.Jonnyfant.BukkitTotemStorage;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.Statistic;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -25,6 +27,7 @@ public class TotemEventListener implements Listener {
                 plugin.getConfig().set(p.getName(),plugin.getConfig().getInt(p.getName())-1);
                 plugin.saveConfig();
                 plugin.reloadConfig();
+                p.incrementStatistic(Statistic.USE_ITEM, Material.TOTEM);
                 p.sendMessage("You just used a Totem of Undying from your Totem Storage. You now have " + plugin.getConfig().getInt(p.getName()) + " Totems left.");
             }
         }
