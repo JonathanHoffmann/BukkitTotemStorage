@@ -1,0 +1,18 @@
+# Ignore compiled Java binaries
+*.class
+
+# Ignore Maven target directory (build output)
+target/
+target/classes/
+
+# MacOS and system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Ignore plugin jar files if copied elsewhere
+*.jar
+*.war
+*.ear

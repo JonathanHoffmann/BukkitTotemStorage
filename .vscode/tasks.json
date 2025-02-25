@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Bukkit Plugin",
+            "type": "shell",
+            "command": "$env:JAVA_HOME='C:\\Program Files\\Java\\jdk-21'; rm *.jar; mvn clean package; cd target; rm original-*.jar; mv *.jar ../.",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$maven"
+            ],
+            "detail": "Builds the Bukkit plugin and outputs a JAR file."
+        }
+    ]
+}
