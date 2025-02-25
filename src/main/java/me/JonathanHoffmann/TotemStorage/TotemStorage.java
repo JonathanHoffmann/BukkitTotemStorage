@@ -1,4 +1,4 @@
-package me.Jonnyfant.BukkitTotemStorage;
+package me.JonathanHoffmann.TotemStorage;
 
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -8,10 +8,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class BukkitTotemStorage extends JavaPlugin {
+public class TotemStorage extends JavaPlugin {
     private final String CONFIG_AMOUNT_KEY = "Amount of Totem storage per player";
     private final int CONFIG_DEFAULT_AMOUNT = 3;
-    private final String CONFIG_DIAMOND_KEY = "Dimaonds cost per saved Totem";
+    private final String CONFIG_DIAMOND_KEY = "Diamonds cost per saved Totem";
     private final int CONFIG_DEFAULT_DIAMOND = 1;
 
     @Override

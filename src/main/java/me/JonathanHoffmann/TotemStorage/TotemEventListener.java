@@ -1,9 +1,7 @@
-package me.Jonnyfant.BukkitTotemStorage;
+package me.JonathanHoffmann.TotemStorage;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Statistic;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,7 +12,7 @@ public class TotemEventListener implements Listener {
     private JavaPlugin plugin;
 
     public TotemEventListener(JavaPlugin p) {
-        plugin=p;
+        plugin = p;
     }
 
     @EventHandler
@@ -24,11 +22,12 @@ public class TotemEventListener implements Listener {
             plugin.reloadConfig();
             if (plugin.getConfig().getInt(event.getEntity().getName()) > 0) {
                 event.setCancelled(false);
-                plugin.getConfig().set(p.getName(),plugin.getConfig().getInt(p.getName())-1);
+                plugin.getConfig().set(p.getName(), plugin.getConfig().getInt(p.getName()) - 1);
                 plugin.saveConfig();
                 plugin.reloadConfig();
                 p.incrementStatistic(Statistic.USE_ITEM, Material.TOTEM);
-                p.sendMessage("You just used a Totem of Undying from your Totem Storage. You now have " + plugin.getConfig().getInt(p.getName()) + " Totems left.");
+                p.sendMessage("You just used a Totem of Undying from your Totem Storage. You now have "
+                        + plugin.getConfig().getInt(p.getName()) + " Totems left.");
             }
         }
     }

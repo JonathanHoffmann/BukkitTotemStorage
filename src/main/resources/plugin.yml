@@ -1,7 +1,7 @@
-name: BukkitTotemStorage
-main: me.Jonnyfant.BukkitTotemStorage.BukkitTotemStorage
-author: Jonnyfant
-version: 1.1
+name: TotemStorage
+main: me.JonathanHoffmann.TotemStorage.TotemStorage
+author: Jonathan Hoffmann
+version: ${plugin.version}
 commands:
   storetotem:
     usage: /<command>
